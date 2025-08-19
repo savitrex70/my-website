@@ -1,0 +1,29 @@
+{% extends "base.html" %}
+
+{% block title %}Videos - MICK Tech Inc.{% endblock %}
+
+{% block content %}
+<header>🎥 Videos</header>
+<a href="{{ url_for('index') }}">⬅ Back to Home</a>
+
+<div class="content">
+  <p>Check out some videos:</p>
+  <iframe src="https://www.youtube.com/embed/dQw4w9WgXcQ" allowfullscreen></iframe>
+  <iframe src="https://www.youtube.com/embed/tgbNymZ7vqY" allowfullscreen></iframe>
+</div>
+
+<style>
+  body { 
+    margin:0; 
+    padding:20px; 
+    background:#0c0c0c; 
+    color:#f7ff5a; 
+    font-family:Arial; 
+  }
+  header { font-size:28px; margin-bottom:20px; }
+  a { color:#f7ff5a; text-decoration:none; font-weight:bold; }
+  a:hover { text-decoration:underline; }
+  .content { margin-top:20px; }
+  iframe { width:100%; max-width:560px; height:315px; margin:10px 0; border:2px solid #f7ff5a; }
+</style>
+{% endblock %}

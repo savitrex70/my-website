@@ -1,0 +1,38 @@
+{% extends "base.html" %}
+
+{% block title %}Future Plans - MICK Tech{% endblock %}
+
+{% block content %}
+<header>📅 Future Plans</header>
+<a href="{{ url_for('index') }}">⬅ Back to Home</a>
+
+<div class="content">
+  <p>Some of our future plans include:</p>
+  <ul>
+    <li>🚀 Expanding services to more platforms</li>
+    <li>📘 Building a knowledge hub with notes & videos</li>
+    <li>🌍 Reaching a global audience</li>
+  </ul>
+</div>
+
+<style>
+  .content {
+    margin-top: 20px;
+  }
+
+  a {
+    color: #f7ff5a;
+    text-decoration: none;
+    font-weight: bold;
+  }
+
+  a:hover {
+    text-decoration: underline;
+  }
+
+  header {
+    font-size: 28px;
+    margin-bottom: 20px;
+  }
+</style>
+{% endblock %}

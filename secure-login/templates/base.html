@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>{% block title %}{% endblock %}</title>
+</head>
+<body>
+  {% if session.user %}
+    <div style="text-align: right; padding: 10px;">
+      Logged in as {{ session.user }} | <a href="{{ url_for('logout') }}">Logout</a>
+    </div>
+  {% endif %}
+
+  {% block content %}{% endblock %}
+</body>
+</html>

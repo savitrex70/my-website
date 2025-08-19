@@ -1,0 +1,58 @@
+{% extends "base.html" %}
+
+{% block title %}MICK Tech Inc.{% endblock %}
+
+{% block content %}
+<style>
+  body {
+    background: url("{{ url_for('static', filename='images/profile.png') }}") no-repeat center center fixed;
+    background-size: cover;
+  }
+  .menu {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-gap: 20px;
+    max-width: 1000px;
+    margin: 30px auto;
+    padding: 20px;
+  }
+  .menu a {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 150px;
+    background: rgba(0, 0, 0, 0.6);
+    border: 2px solid #f7ff5a;
+    color: #f7ff5a;
+    text-decoration: none;
+    font-size: 22px;
+    font-weight: bold;
+    text-transform: uppercase;
+    transition: 0.3s;
+  }
+  .menu a:hover {
+    background: #f7ff5a;
+    color: black;
+    transform: scale(1.05);
+  }
+  header {
+    text-align: center;
+    padding: 20px;
+    color: #f7ff5a;
+    font-size: 30px;
+    font-weight: bold;
+  }
+</style>
+
+<header>MICK TECH INC.</header>
+
+<div class="menu">
+  <a href="{{ url_for('notes') }}">Notes</a>
+  <a href="{{ url_for('projects') }}">Projects</a>
+  <a href="{{ url_for('future') }}">Future Plans</a>
+  <a href="{{ url_for('portfolio') }}">Portfolio</a>
+  <a href="{{ url_for('videos') }}">Videos</a>
+  <a href="{{ url_for('services') }}">Services</a>
+  <a href="{{ url_for('comments') }}">Comments</a>
+</div>
+{% endblock %}

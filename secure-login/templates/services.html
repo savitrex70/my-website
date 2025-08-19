@@ -1,0 +1,32 @@
+{% extends "base.html" %}
+
+{% block title %}Services - MICK Tech Inc.{% endblock %}
+
+{% block content %}
+<header>⚙️ Services</header>
+<a href="{{ url_for('index') }}">⬅ Back to Home</a>
+
+<div class="content">
+  <p>We provide the following services:</p>
+  <ul>
+    <li>🌐 Website Development</li>
+    <li>📱 Mobile Apps</li>
+    <li>📊 Data Analytics</li>
+    <li>🎨 UI/UX Design</li>
+  </ul>
+</div>
+
+<style>
+  body { 
+    margin:0; 
+    padding:20px; 
+    background:#0c0c0c; 
+    color:#f7ff5a; 
+    font-family:Arial; 
+  }
+  header { font-size:28px; margin-bottom:20px; }
+  a { color:#f7ff5a; text-decoration:none; font-weight:bold; }
+  a:hover { text-decoration:underline; }
+  .content { margin-top:20px; }
+</style>
+{% endblock %}

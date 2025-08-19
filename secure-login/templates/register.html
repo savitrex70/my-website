@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Register - Miick Tech Ltd</title>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: Arial, sans-serif;
+    }
+
+    body {
+      height: 100vh;
+      display: flex;
+    }
+
+    /* Left side with photo */
+    .left {
+      flex: 1;
+      background: url("{{ url_for('static', filename='images/intro.png') }}") no-repeat center center;
+      background-size: cover;
+    }
+
+    /* Right side with form */
+    .right {
+      flex: 1;
+      background: linear-gradient(135deg, #1c1f3a, #202548);
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      padding: 40px;
+    }
+
+    .register-box {
+      background: #2af0e3;
+      padding: 40px;
+      border-radius: 20px;
+      width: 100%;
+      max-width: 400px;
+      box-shadow: 0px 8px 20px rgba(0, 0, 0, 0.4);
+    }
+
+    .register-box h2 {
+      text-align: center;
+      color: #0c0c0c;
+      margin-bottom: 25px;
+      font-size: 24px;
+    }
+
+    .register-box label {
+      display: block;
+      margin: 10px 0 5px;
+      font-weight: bold;
+      color: #0c0c0c;
+    }
+
+    .register-box input {
+      width: 100%;
+      padding: 12px;
+      border-radius: 25px;
+      border: none;
+      margin-bottom: 15px;
+      font-size: 15px;
+      box-shadow: 0 3px 6px rgba(0,0,0,0.15);
+    }
+
+    .register-box button {
+      width: 100%;
+      padding: 14px;
+      background: #0c0c0c;
+      color: white;
+      font-size: 16px;
+      border: none;
+      border-radius: 25px;
+      cursor: pointer;
+      font-weight: bold;
+      transition: background 0.3s;
+    }
+
+    .register-box button:hover {
+      background: #333;
+    }
+
+    .register-box p {
+      text-align: center;
+      margin-top: 15px;
+      color: #0c0c0c;
+    }
+
+    .register-box a {
+      color: #0c0c0c;
+      font-weight: bold;
+      text-decoration: none;
+    }
+
+    .register-box a:hover {
+      text-decoration: underline;
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Left side photo -->
+  <div class="left"></div>
+
+  <!-- Right side form -->
+  <div class="right">
+    <div class="register-box">
+      <h2>CREATE AN ACCOUNT</h2>
+      <form method="POST">
+        <label for="username">Username :</label>
+        <input type="text" id="username" name="username" required>
+
+        <label for="email">Email Address :</label>
+        <input type="email" id="email" name="email" required>
+
+        <label for="password">Password :</label>
+        <input type="password" id="password" name="password" required>
+
+        <label for="confirm">Confirm Password :</label>
+        <input type="password" id="confirm" name="confirm" required>
+
+        <button type="submit">REGISTER</button>
+      </form>
+      <p>Already have an account? <a href="{{ url_for('login') }}">Login here</a></p>
+
+    </div>
+  </div>
+
+</body>
+</html>
