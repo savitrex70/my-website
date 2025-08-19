@@ -1,0 +1,17 @@
+# Python
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+.venv/
+venv/
+env/
+
+# Local DB
+secure-login/users.db
+
+# OS/IDE junk
+.DS_Store
+Thumbs.db
+.idea/
+.vscode/
